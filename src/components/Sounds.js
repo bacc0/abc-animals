@@ -94,8 +94,9 @@ const Sounds = ({ count, visibleButtons }) => {
                               {/* <p>name</p> */}
                               <ReactAudioPlayer
                                    src={`/soundsType/${animals[count].type}.mp3`}
-                                   autoPlay
                                    volume={autoplayType ? 1 : 0}
+                                   autoPlay={true}
+                                   audioprocess={false}
                               // playsInline // Add this attribute to enable autoplay on iOS
                               />
                          </>
@@ -107,11 +108,10 @@ const Sounds = ({ count, visibleButtons }) => {
 
                          <ReactAudioPlayer
                               src={`/sounds/${animals[count].type}.mp3`}
-                              autoPlay
-                              // controls
                               volume={autoplay ? 0.3 : 0}
+                              autoPlay={true}
+                              audioprocess={false}
                          // playsInline // Add this attribute to enable autoplay on iOS
-
                          />
 
                     )
