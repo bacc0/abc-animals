@@ -138,10 +138,13 @@ const MainView = ({
             <div style={{ position: 'relative', left: 10 }}>
                 {visible && (
                     <motion.h1
+                        onClick={countHandleClick}
+                        onTouchStart={countHandleClick}
+
                         initial={{
-                            y: 0, x: -10, scale: 0.2, opacity: 0
+                            y: 0, x: -5, scale: 0.8, opacity: 0
                         }}
-                        animate={{ y: 0, x: -10, scale: 1, opacity: 1 }}
+                        animate={{ y: 0, x: -5, scale: 1, opacity: 1 }}
                         transition={{
                             delay: .2, duration: 1.02, type: 'spring', stiffness: 220
                         }}
@@ -161,7 +164,7 @@ const MainView = ({
                         onClick={countHandleClick}
                         onTouchStart={countHandleClick}
                         initial={{
-                            y: 0, x: -10, scale: 0.2, opacity: 0
+                            y: 0, x: -10, scale: 0.8, opacity: 0
                         }}
                         animate={{ y: 0, x: -10, scale: 1, opacity: 1 }}
                         transition={{
@@ -195,14 +198,15 @@ const MainView = ({
                             style={{
                                 margin: 0,
                                 color: '#000000',
+                                x: -10,
                                 fontSize: 50,
                                 textAlign: 'center'
                             }}
                             initial={{
                                 y: 30,
                                 x: -10,
-                                scale: 0,
-                                opacity: 1
+                                scale: 0.8,
+                                opacity: 0
                             }}
                             animate={{ y: 0, x: -10, scale: 1, opacity: 1 }}
                             transition={{
@@ -231,6 +235,7 @@ const MainView = ({
                 >
 
                     <button
+
                         style={{
                             position: 'absolute',
                             top: visibleButtons ? '72vh' : 0,

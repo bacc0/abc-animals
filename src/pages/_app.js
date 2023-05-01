@@ -29,13 +29,25 @@ function App() {
 
     }, [countCoors]);
 
+    // const handleTouch = () => {
+
+    //     if (count < animals.length - 1) {
+
+    //         setCount(count + 1)
+    //     }
+    // }
+
     return (
-        <div style={{
-            backgroundColor: bgColor,
-            transition: 'background-color 2s ease-out',
-            '-webkit-transition': 'background-color 2s ease-out',
-            ' -moz-transition': 'background-color 2s ease-out',
-        }}
+        <div
+            // onTouchStart={handleTouch}
+            // onClick={handleTouch}
+
+            style={{
+                backgroundColor: bgColor,
+                transition: 'background-color 2s ease-out',
+                '-webkit-transition': 'background-color 2s ease-out',
+                ' -moz-transition': 'background-color 2s ease-out',
+            }}
         >
             <header className="App-header">
                 <>
