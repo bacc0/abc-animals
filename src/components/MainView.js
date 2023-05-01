@@ -1,55 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // import './sprite_60fps.css'
 
 import { animals, colors } from '../data'
 
 import { motion } from 'framer-motion'
-
-// const animals = [
-//     {
-//         "id": "0",
-//         "letter": "A",
-//         "type": "alpaca",
-//         "name": 'Alpaca',
-//         "audio": 'alpaca',
-//     },
-//     {
-//         "id": "1",
-//         "letter": "B",
-//         "type": "bear",
-//         "name": 'Bear',
-//         "audio": 'bear',
-//     },
-//     {
-//         "id": "2",
-//         "letter": "C",
-//         "type": "cat",
-//         "name": 'Cat',
-//         "audio": 'cat',
-//     },
-//     {
-//         "id": "3",
-//         "letter": "D",
-//         "type": "donkey",
-//         "name": 'Donkey',
-//         "audio": 'donkey',
-//     },
-
-
-
-//     {
-//         "id": "4",
-//         "letter": "P",
-//         "type": "pig",
-//         "name": 'Pig',
-//         "audio": 'pig',
-//     },
-// ]
-
-// const colors = [
-//     "#DEFFB7", "#FFFFB5", "#C6FFF2", "#FFBEAB", "#ACE6FF", "#FFE0AC"
-// ]
-
 
 
 
@@ -128,18 +82,96 @@ const MainView = ({
             setCount(animals.length - 1)
         }
     }
+    // ------------------------- (swipe) left and right
+    const touchSurfaceRef = useRef(null);
+
+    function handleTouchStart(event) {
+        const startX = event.touches[0].clientX;
+        const startY = event.touches[0].clientY;
+        touchSurfaceRef.current.startX = startX;
+        touchSurfaceRef.current.startY = startY;
+    }
+
+    function handleTouchMove(event) {
+        event.preventDefault();
+    }
+
+    function handleTouchEnd(event) {
+        const deltaX = event.changedTouches[0].clientX - touchSurfaceRef.current.startX;
+        const deltaY = event.changedTouches[0].clientY - touchSurfaceRef.current.startY;
+        const swipeDirection = Math.abs(deltaX) > Math.abs(deltaY) ? "horizontal" : "vertical";
+
+        if (swipeDirection === "horizontal") {
+            if (deltaX > 0) {
+                // right swipe
+                if (count > 0) {
+                    setCount(count - 1)
+                } else {
+                    setCount(animals.length - 1)
+                }
+
+                touchSurfaceRef.current.style.backgroundColor = "blue";
+            } else {
+                // left swipe
+                if (count !== animals.length - 1) {
+                    setCount(count + 1)
+                } else {
+                    setCount(0)
+                }
+                touchSurfaceRef.current.style.backgroundColor = "green";
+            }
+
+            // ------------------------- background color handle  
+            if (countCoors < colors.length - 1) {
+
+                setCountColors(countCoors + 1)
+
+            } else {
+                setCountColors(0)
+            }
+            // ------------------------- background color handle
+
+            // ------------------------- set visibility if buttons 
+            setVisibleButtons(false)
+            setInterval(() => {
+                setVisibleButtons(true)
+            }, 50);
+            // ------------------------- set visibility if buttons 
 
 
+        }
+    }
+    // ------------------------- swipe
 
 
 
     return (
         <>
-            <div style={{ position: 'relative', left: 10 }}>
+            <div
+                // ------------------------- swipe controls
+                className="touch-sensitive"
+
+                ref={touchSurfaceRef}
+
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                // ------------------------- swipe controls
+                style={{
+                    position: 'relative',
+                    left: 10,
+                    background: countCoors,
+
+                    delay: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center'
+
+                }}
+            >
                 {visible && (
                     <motion.h1
-                        onClick={countHandleClick}
-                        onTouchStart={countHandleClick}
+                        // onClick={countHandleClick}
+                        // onTouchStart={countHandleClick}
 
                         initial={{
                             y: 0, x: -5, scale: 0.8, opacity: 0
@@ -161,14 +193,14 @@ const MainView = ({
                 )}
                 {!visible && (
                     <motion.div
-                        onClick={countHandleClick}
-                        onTouchStart={countHandleClick}
+                        // onClick={countHandleClick}
+                        // onTouchStart={countHandleClick}
                         initial={{
                             y: 0, x: -10, scale: 0.8, opacity: 0
                         }}
                         animate={{ y: 0, x: -10, scale: 1, opacity: 1 }}
                         transition={{
-                            delay: .2, duration: 1.02, type: 'spring', stiffness: 220
+                            delay: .3, duration: 1.02, type: 'spring', stiffness: 220
                         }}
                         style={{
                             backgroundImage: `url('/images/${animals[count].type}.svg')`,
@@ -198,7 +230,7 @@ const MainView = ({
                             style={{
                                 margin: 0,
                                 color: '#000000',
-                                x: -10,
+
                                 fontSize: 50,
                                 textAlign: 'center'
                             }}

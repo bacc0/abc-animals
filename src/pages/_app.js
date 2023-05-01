@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import '../styles/App.css';
 import MainView from '../components/MainView'
 import Sounds from '../components/Sounds'
 // import { useEventCallback } from '@material-ui/core';
 import { animals, colors } from '../data'
-import { useRef } from "react";
+
 
 function App() {
 
@@ -86,11 +86,13 @@ function App() {
 
     return (
         <div
+            // ------------------------- swipe controls
             className="touch-sensitive"
             ref={touchSurfaceRef}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            // ------------------------- swipe controls
 
 
             style={{

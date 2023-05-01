@@ -54,8 +54,8 @@ const Sounds = ({ count, visibleButtons }) => {
                          initial={{ opacity: 0 }}
                          animate={{ opacity: 1 }}
                          transition={{
-                              delay: 0.2,
-                              duration: 1,
+                              delay: 1,
+                              duration: 2,
                          }}
                          style={{
                               width: 90,
