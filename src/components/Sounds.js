@@ -4,6 +4,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import { motion } from 'framer-motion'
 
 
+
 const Sounds = ({ count, visibleButtons }) => {
 
      const [switchVisible, setSwitchVisible] = useState(false);
@@ -16,7 +17,7 @@ const Sounds = ({ count, visibleButtons }) => {
      useEffect(() => {
           setTimeout(() => {
                setSwitchVisible(true)
-          }, 3400);
+          }, 3333);
      }, []);
 
      useEffect(() => {
@@ -32,7 +33,7 @@ const Sounds = ({ count, visibleButtons }) => {
           setSwitchVisible(false)
           setTimeout(() => {
                setSwitchVisible(true)
-          }, 3400);
+          }, 3333);
 
      }, [count]);
 
