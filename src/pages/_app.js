@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/App.css';
 import MainView from '../components/MainView'
 import Sounds from '../components/Sounds'
-import { useEventCallback } from '@material-ui/core';
+// import { useEventCallback } from '@material-ui/core';
 import { animals, colors } from '../data'
 
 
