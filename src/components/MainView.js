@@ -200,10 +200,11 @@ const MainView = ({
                             }}
                             initial={{
                                 y: 30,
+                                x: -10,
                                 scale: 0,
                                 opacity: 1
                             }}
-                            animate={{ y: 0, scale: 1, opacity: 1 }}
+                            animate={{ y: 0, x: -10, scale: 1, opacity: 1 }}
                             transition={{
                                 delay: 2,
                                 duration: 1.02,
@@ -232,11 +233,11 @@ const MainView = ({
                     <button
                         style={{
                             position: 'absolute',
-                            top: visibleButtons ? '62vh' : 0,
+                            top: visibleButtons ? '72vh' : 0,
                             left: 8,
 
-                            width: 70,
-                            height: 70,
+                            width: 90,
+                            height: 90,
 
                             border: '1.5px solid #777777',
                             background: '#FFFFFFaa',
@@ -258,10 +259,10 @@ const MainView = ({
                         disabled={!visibleButtons}
                         style={{
                             position: 'absolute',
-                            top: visibleButtons ? '62vh' : 0,
+                            top: visibleButtons ? '72vh' : 0,
                             right: 8,
-                            width: 70,
-                            height: 70,
+                            width: 90,
+                            height: 90,
 
                             border: '1.5px solid #777777',
                             background: '#FFFFFFaa',
