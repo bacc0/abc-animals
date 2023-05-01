@@ -96,7 +96,7 @@ const Sounds = ({ count, visibleButtons }) => {
                                    src={`/soundsType/${animals[count].type}.mp3`}
                                    autoPlay
                                    volume={autoplayType ? 1 : 0}
-                                   playsInline // Add this attribute to enable autoplay on iOS
+                              // playsInline // Add this attribute to enable autoplay on iOS
                               />
                          </>
 
@@ -110,7 +110,7 @@ const Sounds = ({ count, visibleButtons }) => {
                               autoPlay
                               // controls
                               volume={autoplay ? 0.3 : 0}
-                              playsInline // Add this attribute to enable autoplay on iOS
+                         // playsInline // Add this attribute to enable autoplay on iOS
 
                          />
 
