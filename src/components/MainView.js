@@ -55,7 +55,7 @@ import { motion } from 'framer-motion'
 
 const MainView = ({
     count, setCount, countCoors,
-    setCountColors, setBgColor, visibleButtons, setVisibleButtons }) => {
+    setCountColors, visibleButtons, setVisibleButtons }) => {
 
     const [array, setArray] = useState(0);//15
     // const [count, setCount] = useState(0);
@@ -76,13 +76,7 @@ const MainView = ({
         viewChanger()
     }, [count]);
 
-    useEffect(() => {
 
-        setBgColor(colors[countCoors])
-
-        // console.log(colors[countCoors], "COL")
-
-    }, [countCoors]);
 
 
     const countHandleClick = () => {

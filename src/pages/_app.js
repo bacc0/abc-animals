@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import '../styles/App.css';
 import MainView from '../components/MainView'
 import Sounds from '../components/Sounds'
+import { useEventCallback } from '@material-ui/core';
+import { animals, colors } from '../data'
+
 
 function App() {
 
@@ -20,6 +23,11 @@ function App() {
 
         }, 100);
     }, [count]);
+
+    useEffect(() => {
+        setBgColor(colors[countCoors])
+
+    }, [countCoors]);
 
     return (
         <div style={{
