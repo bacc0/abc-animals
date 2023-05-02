@@ -50,8 +50,8 @@ const Sounds = ({ count, visibleButtons }) => {
                                    duration: 2,
                               }}
                               style={{
-                                   width: 122,
-                                   height: 68.8,
+                                   width: 130,
+                                   height: 73.5,
 
                                    // borderRadius: 100,
                                    // border: `1.5px solid ${textButton === 'PLAY'
@@ -66,7 +66,7 @@ const Sounds = ({ count, visibleButtons }) => {
                                    //      : '#ff1744cc'
                                    //      }`,
                                    position: 'absolute',
-                                   top: 8,
+                                   top: 3,
                                    left: 0,
                                    right: 0,
                                    marginLeft: 'auto',
