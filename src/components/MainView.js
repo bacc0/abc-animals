@@ -15,9 +15,11 @@ const MainView = ({
     // const [count, setCount] = useState(0);
     // const [countCoors, setCountColors] = useState(0);
     const [visible, setVisible] = useState(true);
+    const [opacityElement, setOpacityElement] = useState(1);
     // const [visibleButtons, setVisibleButtons] = useState(true);
 
     const viewChanger = () => {
+
         setVisible(true)
         setTimeout(() => {
             // console.log('eeee')
@@ -29,6 +31,13 @@ const MainView = ({
     useEffect(() => {
         viewChanger()
     }, [count]);
+
+    const opacityChanger = () => {
+        setOpacityElement(0.3)
+        setTimeout(() => {
+            setOpacityElement(1)
+        }, 400);
+    }
 
 
 
@@ -109,6 +118,7 @@ const MainView = ({
                 } else {
                     setCount(animals.length - 1)
                 }
+                opacityChanger()
 
                 touchSurfaceRef.current.style.backgroundColor = "blue";
             } else {
@@ -118,7 +128,8 @@ const MainView = ({
                 } else {
                     setCount(0)
                 }
-                touchSurfaceRef.current.style.backgroundColor = "green";
+                opacityChanger()
+                // touchSurfaceRef.current.style.backgroundColor = "green";
             }
 
             // ------------------------- background color handle  
@@ -164,7 +175,13 @@ const MainView = ({
 
                     delay: 'flex',
                     flexDirection: 'row',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+
+                    opacity: opacityElement,
+                    transition: 'opacity 0.3s ease-out',
+                    '-webkit-transition': 'opacity 0.3s ease-out',
+                    ' -moz-transition': 'opacity 0.3s ease-out',
+                    // 'transition-delay': 10.2,
 
                 }}
             >
@@ -185,6 +202,9 @@ const MainView = ({
                             fontSize: 350,
                             margin: 0,
                             color: '#000000',
+                            textAlign: 'center',
+
+
                         }}
 
                     >
@@ -213,6 +233,7 @@ const MainView = ({
                             minHeight: 300,
                             minWidth: 300,
                             // backgroundColor: '#99999933'
+
                         }}
                     />
 
