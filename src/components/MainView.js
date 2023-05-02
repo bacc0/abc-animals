@@ -198,6 +198,7 @@ const MainView = ({
                         initial={{
                             y: 0, x: -10, scale: 0.8, opacity: 0
                         }}
+
                         animate={{ y: 0, x: -10, scale: 1, opacity: 1 }}
                         transition={{
                             delay: .3, duration: 1.02, type: 'spring', stiffness: 220

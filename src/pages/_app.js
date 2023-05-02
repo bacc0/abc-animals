@@ -100,6 +100,10 @@ function App() {
                 transition: 'background-color 2s ease-out',
                 '-webkit-transition': 'background-color 2s ease-out',
                 ' -moz-transition': 'background-color 2s ease-out',
+
+                backgroundImage: 'url("/bgTop.svg"), url("/bgBottom.svg")',
+                backgroundRepeat: 'repeat-x, repeat-x',
+                backgroundPosition: 'top, bottom'
             }}
         >
             <header className="App-header">
@@ -123,7 +127,7 @@ function App() {
                 </>
             </header>
 
-        </div>
+        </div >
     );
 }
 
