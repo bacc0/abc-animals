@@ -87,11 +87,11 @@ function App() {
     return (
         <div
             // ------------------------- swipe controls
-            className="touch-sensitive"
-            ref={touchSurfaceRef}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
+            // className="touch-sensitive"
+            // ref={touchSurfaceRef}
+            // onTouchStart={handleTouchStart}
+            // onTouchMove={handleTouchMove}
+            // onTouchEnd={handleTouchEnd}
             // ------------------------- swipe controls
 
 

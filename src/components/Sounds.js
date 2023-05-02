@@ -14,10 +14,18 @@ const Sounds = ({ count, visibleButtons }) => {
 
      const [textButton, setTextButton] = useState('MUTE');
 
+     const [secondPlayer, setSecondPlayer] = useState(false);
+
      useEffect(() => {
+
+          setTimeout(() => {
+               setSecondPlayer(true)
+          }, 550);
+
           setTimeout(() => {
                setSwitchVisible(true)
           }, 3333);
+
      }, []);
 
      useEffect(() => {
@@ -39,8 +47,10 @@ const Sounds = ({ count, visibleButtons }) => {
 
      const handleClick = () => {
           setAutoplay(!autoplay)
+          // setAutoplay(!autoplay)
           setTextButton(textButton === 'PLAY' ? 'MUTE' : 'PLAY')
      }
+
 
      return (
           <div
@@ -89,22 +99,36 @@ const Sounds = ({ count, visibleButtons }) => {
                     </motion.button>
                )}
 
-               {
-                    !switchVisible && (
-                         <>
-                              {/* <p>name</p> */}
+               {/* {
+                    !switchVisible && ( */}
+               <>
+                    {/* <p>name</p> */}
+                    <ReactAudioPlayer
+                         src={`/soundsType/${animals[count].type}.mp3`}
+                         volume={autoplayType ? 1 : 0}
+                         autoPlay={true}
+                         audioprocess={false}
+                    // playsInline // Add this attribute to enable autoplay on iOS
+                    />
+
+                    {
+                         secondPlayer && (
                               <ReactAudioPlayer
-                                   src={`/soundsType/${animals[count].type}.mp3`}
-                                   volume={autoplayType ? 1 : 0}
+                                   src={`/sounds/${animals[count].type}.mp3`}
+                                   volume={autoplay ? 0.25 : 0}
                                    autoPlay={true}
                                    audioprocess={false}
-                              // playsInline // Add this attribute to enable autoplay on iOS
                               />
-                         </>
+                         )
+                    }
 
-                    )
-               }
-               {
+
+
+               </>
+
+               {/* )
+               } */}
+               {/* {
                     switchVisible && (
 
                          <ReactAudioPlayer
@@ -116,7 +140,7 @@ const Sounds = ({ count, visibleButtons }) => {
                          />
 
                     )
-               }
+               } */}
 
                {/* <div>Sounds {animals[count].type}</div> */}
 
