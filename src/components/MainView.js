@@ -202,7 +202,7 @@ const MainView = ({
                                 alignItems: 'center'
                             }}
                         >
-                            {animals[count].letter}
+                            {/* {animals[count].letter} */}
                         </motion.div>
                     )
                 }
@@ -247,9 +247,6 @@ const MainView = ({
                                 left: 3,
                                 width: 62,
                                 height: 110,
-
-
-
 
                                 backgroundImage: `url('/images/left.svg')`,
                                 backgroundSize: 'cover',
