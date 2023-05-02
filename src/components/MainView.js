@@ -12,7 +12,6 @@ const MainView = ({
     const [opacityElement, setOpacityElement] = useState(1);
 
     const viewChanger = () => {
-
         setVisible(true)
         setTimeout(() => {
 
@@ -21,23 +20,18 @@ const MainView = ({
     }
 
     useEffect(() => {
-
         viewChanger()
     }, [count]);
 
     const opacityChanger = () => {
-
         setOpacityElement(0.05)
-
         setTimeout(() => {
             setOpacityElement(1)
         }, 400);
     }
 
     const countHandleClick = () => {
-
         if (countCoors < colors.length - 1) {
-
             setCountColors(countCoors + 1)
         } else {
             setCountColors(0)
@@ -65,7 +59,6 @@ const MainView = ({
         }, 3000);
 
         if (countCoors < colors.length - 1) {
-
             setCountColors(countCoors + 1)
         } else {
             setCountColors(0)
@@ -95,7 +88,6 @@ const MainView = ({
     }
 
     function handleTouchEnd(event) {
-
         const deltaX = event.changedTouches[0].clientX - touchSurfaceRef.current.startX;
         const deltaY = event.changedTouches[0].clientY - touchSurfaceRef.current.startY;
         const swipeDirection = Math.abs(deltaX) > Math.abs(deltaY) ? "horizontal" : "vertical";
@@ -121,9 +113,7 @@ const MainView = ({
 
             //------------------------------------ background color handle  
             if (countCoors < colors.length - 1) {
-
                 setCountColors(countCoors + 1)
-
             } else {
                 setCountColors(0)
             }
