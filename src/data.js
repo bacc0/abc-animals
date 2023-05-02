@@ -98,11 +98,6 @@ export const animals = [
           "name": 'Owl',
           "audio": 'owl',
      },
-
-
-
-
-
      {
           "id": "14",
           "letter": "P",
@@ -110,6 +105,78 @@ export const animals = [
           "name": 'Pig',
           "audio": 'pig',
      },
+     {
+          "id": "15",
+          "letter": "Q",
+          "type": "quail",
+          "name": 'Quail',
+          "audio": 'quail',
+     },
+     {
+          "id": "16",
+          "letter": "R",
+          "type": "raccoon",
+          "name": 'Raccoon',
+          "audio": 'raccoon',
+     },
+     {
+          "id": "17",
+          "letter": "S",
+          "type": "snake",
+          "name": 'Snake',
+          "audio": 'snake',
+     },
+     {
+          "id": "18",
+          "letter": "T",
+          "type": "tiger",
+          "name": 'Tiger',
+          "audio": 'tiger',
+     },
+     {
+          "id": "19",
+          "letter": "U",
+          "type": "urial",
+          "name": 'Urial Sheep',
+          "audio": 'urial',
+     },
+     {
+          "id": "20",
+          "letter": "V",
+          "type": "vampireBat",
+          "name": 'Vampire Bat',
+          "audio": 'vampireBat',
+     },
+     {
+          "id": "21",
+          "letter": "W",
+          "type": "whale",
+          "name": 'Whale',
+          "audio": 'whale',
+     },
+     {
+          "id": "22",
+          "letter": "X",
+          "type": "xRay",
+          "name": 'X Ray Fish',
+          "audio": 'xRay',
+     },
+     {
+          "id": "23",
+          "letter": "Y",
+          "type": "yak",
+          "name": 'Yak',
+          "audio": 'yak',
+     },
+     {
+          "id": "24",
+          "letter": "Z",
+          "type": "zebra",
+          "name": 'Zebra',
+          "audio": 'zebra',
+     },
+
+
 ]
 
 export const colors = [
