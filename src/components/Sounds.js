@@ -4,7 +4,6 @@ import ReactAudioPlayer from 'react-audio-player'
 import { motion } from 'framer-motion'
 
 
-
 const Sounds = ({ count, visibleButtons }) => {
 
      const [autoplay, setAutoplay] = useState(true);
