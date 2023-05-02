@@ -243,10 +243,10 @@ const MainView = ({
                         <div
                             style={{
                                 position: 'absolute',
-                                top: visibleButtons ? '56vh' : 0,
+                                top: visibleButtons ? 'calc(62vh - 55px)' : 0,
                                 left: 3,
-                                width: 72,
-                                height: 128,
+                                width: 62,
+                                height: 110,
 
 
 
@@ -263,10 +263,10 @@ const MainView = ({
                             disabled={!visibleButtons}
                             style={{
                                 position: 'absolute',
-                                top: visibleButtons ? '56vh' : 0,
+                                top: visibleButtons ? 'calc(62vh - 55px)' : 0,
                                 right: 3,
-                                width: 72,
-                                height: 128,
+                                width: 62,
+                                height: 110,
 
 
 

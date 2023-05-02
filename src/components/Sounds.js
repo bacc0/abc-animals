@@ -50,8 +50,8 @@ const Sounds = ({ count, visibleButtons }) => {
                                    duration: 2,
                               }}
                               style={{
-                                   width: 130,
-                                   height: 73.5,
+                                   width: 110,
+                                   height: 62,
 
                                    // borderRadius: 100,
                                    // border: `1.5px solid ${textButton === 'PLAY'
