@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 
 
 const MainView = ({
-    count, setCount, countCoors,
+    count, setCount, countCoors, bgColor,
     setCountColors, visibleButtons, setVisibleButtons }) => {
 
     const [array, setArray] = useState(0);//15
@@ -33,7 +33,7 @@ const MainView = ({
     }, [count]);
 
     const opacityChanger = () => {
-        setOpacityElement(0.3)
+        setOpacityElement(0.05)
         setTimeout(() => {
             setOpacityElement(1)
         }, 400);
@@ -233,9 +233,18 @@ const MainView = ({
                             minHeight: 300,
                             minWidth: 300,
                             // backgroundColor: '#99999933'
+                            fontSize: 60,
+                            fontWeight: 600,
+                            color: bgColor,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center'
 
                         }}
-                    />
+                    >
+                        {animals[count].letter}
+
+                    </motion.div>
 
                 )}
 
