@@ -42,7 +42,7 @@ const Sounds = ({ count, visibleButtons }) => {
           <Fragment>
                {
                     visibleButtons && (
-                         <motion.button
+                         <motion.div
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               transition={{
@@ -50,34 +50,39 @@ const Sounds = ({ count, visibleButtons }) => {
                                    duration: 2,
                               }}
                               style={{
-                                   width: 90,
-                                   height: 90,
+                                   width: 152.5,
+                                   height: 86,
 
-                                   borderRadius: 100,
-                                   border: `1.5px solid ${textButton === 'PLAY'
-                                        ? '#154B19'
-                                        : '#C60001'
-                                        }`,
+                                   // borderRadius: 100,
+                                   // border: `1.5px solid ${textButton === 'PLAY'
+                                   //      ? '#154B19'
+                                   //      : '#C60001'
+                                   //      }`,
                                    fontSize: 18,
                                    fontWeight: 600,
-                                   color: '#FFFFFF',
-                                   backgroundColor: `${textButton === 'PLAY'
-                                        ? '#2e7d32cc'
-                                        : '#ff1744cc'
-                                        }`,
+                                   color: '#FFFFFF00',
+                                   // backgroundColor: `${textButton === 'PLAY'
+                                   //      ? '#2e7d32cc'
+                                   //      : '#ff1744cc'
+                                   //      }`,
                                    position: 'absolute',
                                    top: 12,
                                    left: 0,
                                    right: 0,
                                    marginLeft: 'auto',
                                    marginRight: 'auto',
-                                   backdropFilter: 'blur(2px)',
-                                   '-webkit-backdrop-filter': 'blur(2px)',
+                                   // backdropFilter: 'blur(2px)',
+                                   // '-webkit-backdrop-filter': 'blur(2px)',
+
+                                   backgroundImage: `url('/images/${textButton === 'PLAY' ? 'playOFF' : 'playON'}.svg')`,
+                                   backgroundSize: 'cover',
+                                   backgroundRepeat: 'no-repeat',
+                                   backgroundPosition: `-${0}px 0px`,
                               }}
                               onClick={handleClick}
                          >
-                              {textButton}
-                         </motion.button>
+                              {/* {textButton} */}
+                         </motion.div>
                     )
                }
 

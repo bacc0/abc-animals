@@ -240,7 +240,7 @@ const MainView = ({
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1, duration: 2 }}
                     >
-                        <button
+                        <div
                             style={{
                                 position: 'absolute',
                                 top: visibleButtons ? '72vh' : 0,
@@ -248,21 +248,18 @@ const MainView = ({
                                 width: 90,
                                 height: 90,
 
-                                border: '1.5px solid #777777',
-                                background: '#FFFFFFaa',
-                                borderRadius: 100,
-                                fontSize: 30,
-                                fontWeight: 700,
-                                color: '#777777',
-                                backdropFilter: 'blur(2px)',
-                                '-webkit-backdrop-filter': 'blur(2px)',
+
+
+
+                                backgroundImage: `url('/images/left.svg')`,
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: `-${0}px 0px`,
                             }}
                             onClick={countHandleClickPrev}
-                        >
-                            {'<'}
-                        </button>
+                        />
 
-                        <button
+                        <div
                             disabled={!visibleButtons}
                             style={{
                                 position: 'absolute',
@@ -271,20 +268,16 @@ const MainView = ({
                                 width: 90,
                                 height: 90,
 
-                                border: '1.5px solid #777777',
-                                background: '#FFFFFFaa',
-                                borderRadius: 100,
 
-                                fontSize: 30,
-                                fontWeight: 700,
-                                color: '#777777',
-                                backdropFilter: 'blur(2px)',
-                                '-webkit-backdrop-filter': 'blur(2px)',
+
+
+                                backgroundImage: `url('/images/right.svg')`,
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: `-${0}px 0px`,
                             }}
                             onClick={countHandleClick}
-                        >
-                            {'>'}
-                        </button>
+                        />
                     </motion.div>
                 )
             }
