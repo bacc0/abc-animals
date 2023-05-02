@@ -74,7 +74,7 @@ const Sounds = ({ count, visibleButtons }) => {
                                    // backdropFilter: 'blur(2px)',
                                    // '-webkit-backdrop-filter': 'blur(2px)',
 
-                                   backgroundImage: `url('/images/${textButton === 'PLAY' ? 'playOFF' : 'playON'}.svg')`,
+                                   backgroundImage: `url('/images/${textButton === 'PLAY' ? 'playON' : 'playOFF'}.svg')`,
                                    backgroundSize: 'cover',
                                    backgroundRepeat: 'no-repeat',
                                    backgroundPosition: `-${0}px 0px`,
