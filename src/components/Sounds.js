@@ -63,8 +63,8 @@ const Sounds = ({ count, visibleButtons }) => {
                                    fontWeight: 600,
                                    color: '#FFFFFF',
                                    backgroundColor: `${textButton === 'PLAY'
-                                        ? '#2e7d32'
-                                        : '#ff1744'
+                                        ? '#2e7d32cc'
+                                        : '#ff1744cc'
                                         }`,
                                    position: 'absolute',
                                    top: 12,
@@ -72,6 +72,8 @@ const Sounds = ({ count, visibleButtons }) => {
                                    right: 0,
                                    marginLeft: 'auto',
                                    marginRight: 'auto',
+                                   backdropFilter: 'blur(2px)',
+                                   '-webkit-backdrop-filter': 'blur(2px)',
                               }}
                               onClick={handleClick}
                          >
