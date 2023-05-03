@@ -73,32 +73,47 @@ function App() {
 
                 // background: bgColor,
 
-                backgroundImage: 'url("/bgTop.svg"), url("/bgBottom.svg")',
+                backgroundImage: `url("/topGr.svg"), url("/bottomGr.svg")`,
                 backgroundRepeat: 'repeat-x, repeat-x',
                 backgroundPosition: 'top, bottom',
 
 
+
+                // backgroundImage: 'url("/topGr.svg, url("/bottomGr.svg")',
+                // backgroundRepeat: 'repeat-x, repeat-x',
+                // backgroundPosition: 'top, top',
+
+
             }}
         >
-            <div className="App-header">
-                <Fragment>
+            <div
+                style={{
+                    backgroundImage: 'url("/bgTop.svg"), url("/bgBottom.svg")',
+                    backgroundRepeat: 'repeat-x, repeat-x',
+                    backgroundPosition: 'top, bottom',
+                }}
 
-                    <Sounds
-                        count={count}
-                        visibleButtons={visibleButtons}
-                    />
+            >
+                <div className="App-header">
+                    <Fragment>
 
-                    <MainView
-                        count={count}
-                        bgColor={bgColor}
-                        setCount={setCount}
-                        setBgColor={setBgColor}
-                        countCoors={countCoors}
-                        setCountColors={setCountColors}
-                        visibleButtons={visibleButtons}
-                        setVisibleButtons={setVisibleButtons}
-                    />
-                </Fragment>
+                        <Sounds
+                            count={count}
+                            visibleButtons={visibleButtons}
+                        />
+
+                        <MainView
+                            count={count}
+                            bgColor={bgColor}
+                            setCount={setCount}
+                            setBgColor={setBgColor}
+                            countCoors={countCoors}
+                            setCountColors={setCountColors}
+                            visibleButtons={visibleButtons}
+                            setVisibleButtons={setVisibleButtons}
+                        />
+                    </Fragment>
+                </div>
             </div>
         </div >
     );
