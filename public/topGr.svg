@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="100" height="300" viewBox="0, 0, 100, 300">
   <defs>
-    <linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="50.045" y1="267.146" x2="50.045" y2="-1.362">
+    <linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="50.045" y1="245.146" x2="50.045" y2="-1.362">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
       <stop offset="0.235" stop-color="#FFFFFF" stop-opacity="0"/>
       <stop offset="0.432" stop-color="#FFFFFF" stop-opacity="0"/>
@@ -11,6 +11,6 @@
     </linearGradient>
   </defs>
   <g id="Layer_1">
-    <path d="M-0.955,-1.362 L101.045,-1.362 L101.045,267.146 L-0.955,267.146 L-0.955,-1.362 z" fill="url(#Gradient_1)"/>
+    <path d="M-0.955,-1.362 L101.045,-1.362 L101.045,245.146 L-0.955,245.146 L-0.955,-1.362 z" fill="url(#Gradient_1)"/>
   </g>
 </svg>
