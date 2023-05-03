@@ -180,5 +180,5 @@ export const animals = [
 ]
 
 export const colors = [
-     "#DEFFB7", "#FFFFB5", "#C6FFF2", "#FFBEAB", "#ACE6FF", "#FFE0AC"
+     "#DEFFB7", '#f8bbd0', "#FFFFB5", "#FFBEAB", "#e6ee9c", "#a7ffeb", "#d1c4e9", "#ffe0b2", "#ACE6FF", "#FFE0AC", "#F8D1FF"
 ]

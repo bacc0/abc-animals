@@ -25,8 +25,40 @@ function App() {
         }, 100);
     }, [count]);
 
+
     useEffect(() => {
         setBgColor(colors[countCoors])
+        // setBgColor(`linear-gradient(${countCoors === 0
+        //     ? 0
+        //     : countCoors === 1
+        //         ? 20
+        //         : countCoors === 2
+        //             ? 40
+        //             : countCoors === 3
+        //                 ? 60
+        //                 : countCoors === 4
+        //                     ? 40
+        //                     : countCoors === 5
+        //                         ? 20
+        //                         : 0
+
+
+        //     // countCoors === 0 ? 20 :
+        //     // countCoors > 2 ? 40 :
+        //     //     countCoors > 4 ? 60 : 40
+        //     }deg, 
+        //     ${colors[countCoors]
+        //     } , ${countCoors === 0
+        //         ? colors[5]
+        //         : countCoors === 5
+        //             ? colors[countCoors]
+        //             : colors[countCoors - 1]
+        //     }, ${countCoors === 0
+        //         ? colors[5]
+        //         : countCoors === 5
+        //             ? colors[countCoors]
+        //             : colors[countCoors - 1]
+        //     })`)
 
     }, [countCoors]);
 
@@ -38,21 +70,24 @@ function App() {
                 '-webkit-transition': 'background-color 2s ease-out',
                 ' -moz-transition': 'background-color 2s ease-out',
 
+
+                // background: bgColor,
+
                 backgroundImage: 'url("/bgTop.svg"), url("/bgBottom.svg")',
                 backgroundRepeat: 'repeat-x, repeat-x',
-                backgroundPosition: 'top, bottom'
+                backgroundPosition: 'top, bottom',
+
+
             }}
         >
             <div className="App-header">
                 <Fragment>
-                    {
-                        visibleSounds && (
-                            <Sounds
-                                count={count}
-                                visibleButtons={visibleButtons}
-                            />
-                        )
-                    }
+
+                    <Sounds
+                        count={count}
+                        visibleButtons={visibleButtons}
+                    />
+
                     <MainView
                         count={count}
                         bgColor={bgColor}

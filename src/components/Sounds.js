@@ -41,49 +41,42 @@ const Sounds = ({ count, visibleButtons }) => {
      return (
           <Fragment>
                {
-                    visibleButtons && (
-                         <motion.div
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              transition={{
-                                   delay: 1,
-                                   duration: 2,
-                              }}
-                              style={{
-                                   width: 110,
-                                   height: 62,
 
-                                   // borderRadius: 100,
-                                   // border: `1.5px solid ${textButton === 'PLAY'
-                                   //      ? '#154B19'
-                                   //      : '#C60001'
-                                   //      }`,
-                                   fontSize: 18,
-                                   fontWeight: 600,
-                                   color: '#FFFFFF00',
-                                   // backgroundColor: `${textButton === 'PLAY'
-                                   //      ? '#2e7d32cc'
-                                   //      : '#ff1744cc'
-                                   //      }`,
-                                   position: 'absolute',
-                                   top: 3,
-                                   left: 0,
-                                   right: 0,
-                                   marginLeft: 'auto',
-                                   marginRight: 'auto',
-                                   // backdropFilter: 'blur(2px)',
-                                   // '-webkit-backdrop-filter': 'blur(2px)',
+                    <motion.div
+                         initial={{ opacity: 0 }}
+                         animate={{ opacity: 1 }}
+                         transition={{
+                              delay: 1,
+                              duration: 2,
+                         }}
+                         style={{
+                              width: 110,
+                              height: 62,
 
-                                   backgroundImage: `url('/images/${textButton === 'PLAY' ? 'playON' : 'playOFF'}.svg')`,
-                                   backgroundSize: 'cover',
-                                   backgroundRepeat: 'no-repeat',
-                                   backgroundPosition: `-${0}px 0px`,
-                              }}
-                              onClick={handleClick}
-                         >
-                              {/* {textButton} */}
-                         </motion.div>
-                    )
+
+                              fontSize: 18,
+                              fontWeight: 600,
+                              color: '#FFFFFF00',
+
+                              position: 'absolute',
+                              top: 3,
+                              left: 0,
+                              right: 0,
+                              marginLeft: 'auto',
+                              marginRight: 'auto',
+                              // backdropFilter: 'blur(2px)',
+                              // '-webkit-backdrop-filter': 'blur(2px)',
+
+                              backgroundImage: `url('/images/${textButton === 'PLAY' ? 'playON' : 'playOFF'}.svg')`,
+                              backgroundSize: 'cover',
+                              backgroundRepeat: 'no-repeat',
+                              backgroundPosition: `-${0}px 0px`,
+                         }}
+                         onClick={handleClick}
+                    >
+                         {/* {textButton} */}
+                    </motion.div>
+
                }
 
                <Fragment>

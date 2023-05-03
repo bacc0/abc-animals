@@ -233,51 +233,51 @@ const MainView = ({
                     }
                 </div>
             </div>
-            {
-                visibleButtons && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1, duration: 2 }}
-                    >
-                        <div
-                            style={{
-                                position: 'absolute',
-                                top: visibleButtons ? 'calc(62vh - 55px)' : 0,
-                                left: 3,
-                                width: 62,
-                                height: 110,
+            {/* {
+                visibleButtons && ( */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 2 }}
+            >
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: 'calc(62vh - 55px)',
+                        left: 3,
+                        width: 62,
+                        height: 110,
 
-                                backgroundImage: `url('/images/left.svg')`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: `-${0}px 0px`,
-                            }}
-                            onClick={countHandleClickPrev}
-                        />
+                        backgroundImage: `url('/images/left.svg')`,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: `-${0}px 0px`,
+                    }}
+                    onClick={countHandleClickPrev}
+                />
 
-                        <div
-                            disabled={!visibleButtons}
-                            style={{
-                                position: 'absolute',
-                                top: visibleButtons ? 'calc(62vh - 55px)' : 0,
-                                right: 3,
-                                width: 62,
-                                height: 110,
-
-
+                <div
+                    disabled={!visibleButtons}
+                    style={{
+                        position: 'absolute',
+                        top: 'calc(62vh - 55px)',
+                        right: 3,
+                        width: 62,
+                        height: 110,
 
 
-                                backgroundImage: `url('/images/right.svg')`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: `-${0}px 0px`,
-                            }}
-                            onClick={countHandleClick}
-                        />
-                    </motion.div>
-                )
-            }
+
+
+                        backgroundImage: `url('/images/right.svg')`,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: `-${0}px 0px`,
+                    }}
+                    onClick={countHandleClick}
+                />
+            </motion.div>
+            {/* )
+            } */}
         </Fragment>
     )
 }
