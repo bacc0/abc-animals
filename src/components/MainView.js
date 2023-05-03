@@ -198,7 +198,7 @@ const MainView = ({
                                     backgroundImage: `url('/images/${animals[count].type}.svg')`,
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
-                                    // backgroundPosition: `-${0}px 0px`,
+                                    backgroundPosition: `-${0}px 0px`,
 
                                     display: 'block',
                                     minHeight: 300,
