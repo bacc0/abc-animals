@@ -179,31 +179,41 @@ const MainView = ({
                 }
                 {
                     !visible && (
-                        <motion.div
-                            initial={{ y: 0, x: -10, scale: 0.8, opacity: 0 }}
-                            animate={{ y: 0, x: -10, scale: 1, opacity: 1 }}
-                            transition={{
-                                delay: .3, duration: 1.02, type: 'spring', stiffness: 220
-                            }}
-                            style={{
-                                backgroundImage: `url('/images/${animals[count].type}.svg')`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: `-${0}px 0px`,
+                        <div
+                        // style={{
+                        //     backgroundImage: `url('/bgSea.svg')`,
+                        //     backgroundSize: 'cover',
+                        //     backgroundRepeat: 'no-repeat',
+                        //     backgroundPosition: `-${0}px 0px`,
+                        // }}
 
-                                display: 'block',
-                                minHeight: 300,
-                                minWidth: 300,
-                                fontSize: 60,
-                                fontWeight: 600,
-                                color: bgColor,
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}
                         >
-                            {/* {animals[count].letter} */}
-                        </motion.div>
+                            <motion.div
+                                initial={{ y: 0, x: -10, scale: 0.8, opacity: 0 }}
+                                animate={{ y: 0, x: -10, scale: 1, opacity: 1 }}
+                                transition={{
+                                    delay: .3, duration: 1.02, type: 'spring', stiffness: 220
+                                }}
+                                style={{
+                                    backgroundImage: `url('/images/${animals[count].type}.svg')`,
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    // backgroundPosition: `-${0}px 0px`,
+
+                                    display: 'block',
+                                    minHeight: 300,
+                                    minWidth: 300,
+                                    fontSize: 60,
+                                    fontWeight: 600,
+                                    color: bgColor,
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}
+                            >
+                                {/* {animals[count].letter} */}
+                            </motion.div>
+                        </div>
                     )
                 }
 
